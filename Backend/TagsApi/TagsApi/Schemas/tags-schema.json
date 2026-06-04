@@ -1,0 +1,51 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tags Import Schema",
+  "description": "Schema for validating tag import payload",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [ "name", "color" ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "name", "color" ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  ]
+}

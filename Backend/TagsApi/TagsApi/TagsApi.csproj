@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<RootNamespace>TagsApi</RootNamespace>
+		<RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore"                  Version="8.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design"           Version="8.0.11">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"          Version="8.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer"  Version="8.0.11" />
+		<PackageReference Include="BCrypt.Net-Next"                                Version="4.0.3" />
+		<!-- Updated to 8.4.0 — the version NuGet actually resolved (8.3.2 not available) -->
+		<PackageReference Include="Microsoft.IdentityModel.Tokens"                 Version="8.4.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt"                Version="8.4.0" />
+		<PackageReference Include="CoreWCF.Http"                                   Version="1.5.2" />
+		<PackageReference Include="CoreWCF.Primitives"                             Version="1.5.2" />
+		<PackageReference Include="Grpc.AspNetCore"                                Version="2.67.0" />
+		<PackageReference Include="Grpc.Net.Client"                                Version="2.67.0" />
+		<PackageReference Include="Google.Protobuf"                                Version="3.29.3" />
+		<PackageReference Include="Grpc.Tools"                                     Version="2.67.0">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="HotChocolate.AspNetCore"                        Version="13.9.14" />
+		<PackageReference Include="HotChocolate.AspNetCore.Authorization"          Version="13.9.14" />
+		<PackageReference Include="JsonSchema.Net"                                 Version="7.3.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore"                         Version="6.9.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\weather.proto" GrpcServices="Both" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Schemas\tags.xsd">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Schemas\tags-schema.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TagsApi.Application\TagsApi.Application.csproj" />
+		<ProjectReference Include="..\TagsApi.Infrastructure\TagsApi.Infrastructure.csproj" />
+		<ProjectReference Include="..\TagsApi.Domain\TagsApi.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

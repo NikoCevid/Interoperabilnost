@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4086EAD2-C993-46E8-9657-7C6F46F09249}|TagsApi.Application\\TagsApi.Application.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi.application\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4086EAD2-C993-46E8-9657-7C6F46F09249}|TagsApi.Application\\TagsApi.Application.csproj|solutionrelative:tagsapi.application\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CB295B-B6B2-49AF-80B6-4C57A35083FD}|TagsApi.Infrastructure\\TagsApi.Infrastructure.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CB295B-B6B2-49AF-80B6-4C57A35083FD}|TagsApi.Infrastructure\\TagsApi.Infrastructure.csproj|solutionrelative:tagsapi.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Program.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Program.cs",
+              "RelativeToolTip": "TagsApi\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T11:56:33.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthDTO.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Application\\DTO\\AuthDTO.cs",
+              "RelativeDocumentMoniker": "TagsApi.Application\\DTO\\AuthDTO.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Application\\DTO\\AuthDTO.cs",
+              "RelativeToolTip": "TagsApi.Application\\DTO\\AuthDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T11:44:30.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "TagsApi.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "TagsApi.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T11:42:32.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\AuthService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\AuthService.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswIUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T11:41:40.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T11:40:51.753Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

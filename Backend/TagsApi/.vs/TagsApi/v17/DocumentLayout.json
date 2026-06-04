@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\TagsController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\TagsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\TagsController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\TagsController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwDsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T14:55:23.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherGrpcService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherGrpcService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\WeatherGrpcService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T13:42:19.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\WeatherService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T13:42:17.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\WeatherController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\WeatherController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\WeatherController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\WeatherController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T13:42:15.417Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

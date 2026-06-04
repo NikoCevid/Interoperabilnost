@@ -1,0 +1,13 @@
+@"
+node_modules/
+Frontend/node_modules/
+Backend/TagsApi/TagsApi/obj/
+Backend/TagsApi/TagsApi/bin/
+Backend/TagsApi/TagsApi.Application/obj/
+Backend/TagsApi/TagsApi.Application/bin/
+Backend/TagsApi/TagsApi.Domain/obj/
+Backend/TagsApi/TagsApi.Domain/bin/
+Backend/TagsApi/TagsApi.Infrastructure/obj/
+Backend/TagsApi/TagsApi.Infrastructure/bin/
+.env
+"@ | Out-File -FilePath .gitignore -Encoding utf8
