@@ -15,13 +15,19 @@ public class ImportController : ControllerBase
 {
     private readonly ITagService _tagService;
     private readonly ImportValidationService _importValidation;
+    private readonly IExternalTagService _externalTagService;
+    private readonly IConfiguration _config;
 
     public ImportController(
         ITagService tagService,
-        ImportValidationService importValidation)
+        ImportValidationService importValidation,
+        IExternalTagService externalTagService,
+        IConfiguration config)
     {
         _tagService = tagService;
         _importValidation = importValidation;
+        _externalTagService = externalTagService;
+        _config = config;
     }
 
 
@@ -52,23 +58,52 @@ public class ImportController : ControllerBase
 
         var userId = GetCurrentUserId();
 
+        ImportValidationResult r;
         if (isXml)
         {
-            ImportValidationResult r = _importValidation.ParseAndValidateXml(body);
+            r = _importValidation.ParseAndValidateXml(body);
             if (!r.IsValid)
                 return UnprocessableEntity(new
                 { message = "XML validation failed", format = "XML", errors = r.Errors });
-
-            var created = await _tagService.ImportAsync(r.Tags, userId, ct);
-            return Ok(new { message = $"Successfully imported {created.Count} tag(s)", tags = created });
         }
         else
         {
-            ImportValidationResult r = _importValidation.ParseAndValidateJson(body);
+            r = _importValidation.ParseAndValidateJson(body);
             if (!r.IsValid)
                 return UnprocessableEntity(new
                 { message = "JSON validation failed", format = "JSON", errors = r.Errors });
+        }
 
+        bool useExternal = _config.GetValue<bool>("UseExternalApi");
+
+        if (useExternal)
+        {
+            var spaceId = _config["ClickUp:SpaceId"] ?? "";
+            var results = new List<object>();
+            var errors = new List<object>();
+
+            foreach (var tag in r.Tags)
+            {
+                try
+                {
+                    var created = await _externalTagService.CreateTagAsync(spaceId, tag.Name, tag.Color, ct);
+                    results.Add(created);
+                }
+                catch (Exception ex)
+                {
+                    errors.Add(new { tag = tag.Name, error = ex.Message });
+                }
+            }
+
+            return Ok(new
+            {
+                message = $"Successfully imported {results.Count} tag(s) via external API",
+                tags = results,
+                errors
+            });
+        }
+        else
+        {
             var created = await _tagService.ImportAsync(r.Tags, userId, ct);
             return Ok(new { message = $"Successfully imported {created.Count} tag(s)", tags = created });
         }

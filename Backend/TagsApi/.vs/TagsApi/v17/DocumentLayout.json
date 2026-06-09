@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45CB295B-B6B2-49AF-80B6-4C57A35083FD}|TagsApi.Infrastructure\\TagsApi.Infrastructure.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi.infrastructure\\externalservices\\externaltagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CB295B-B6B2-49AF-80B6-4C57A35083FD}|TagsApi.Infrastructure\\TagsApi.Infrastructure.csproj|solutionrelative:tagsapi.infrastructure\\externalservices\\externaltagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\importcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\importcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\graphql\\taggraphql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\graphql\\taggraphql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\xmlvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\xmlvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\jakartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\jakartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\protos\\weather.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\protos\\weather.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +47,16 @@
       "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\services\\weathergrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\jakartacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\jakartacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\soap\\tagsoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\soap\\tagsoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|c:\\users\\user\\desktop\\tagsproject\\backend\\tagsapi\\tagsapi\\controllers\\soapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5010F3-4E7A-4281-BF52-076801898B16}|TagsApi\\TagsApi.csproj|solutionrelative:tagsapi\\controllers\\soapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,55 +86,174 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TagsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\TagsController.cs",
-              "RelativeDocumentMoniker": "TagsApi\\Controllers\\TagsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\TagsController.cs",
-              "RelativeToolTip": "TagsApi\\Controllers\\TagsController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwDsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T14:55:23.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherGrpcService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
-              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherGrpcService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
-              "RelativeToolTip": "TagsApi\\Services\\WeatherGrpcService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:42:19.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WeatherService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
-              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
-              "RelativeToolTip": "TagsApi\\Services\\WeatherService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "ImportController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\ImportController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\ImportController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\ImportController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\ImportController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:42:17.274Z",
+              "WhenOpened": "2026-06-09T19:50:36.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Program.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Program.cs",
+              "RelativeToolTip": "TagsApi\\Program.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:44:14.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TagService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\TagService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\TagService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\TagService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\TagService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:41:33.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExternalTagService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Infrastructure\\ExternalServices\\ExternalTagService.cs",
+              "RelativeDocumentMoniker": "TagsApi.Infrastructure\\ExternalServices\\ExternalTagService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi.Infrastructure\\ExternalServices\\ExternalTagService.cs",
+              "RelativeToolTip": "TagsApi.Infrastructure\\ExternalServices\\ExternalTagService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:36:30.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TagGraphQL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\GraphQL\\TagGraphQL.cs",
+              "RelativeDocumentMoniker": "TagsApi\\GraphQL\\TagGraphQL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\GraphQL\\TagGraphQL.cs",
+              "RelativeToolTip": "TagsApi\\GraphQL\\TagGraphQL.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:35:15.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherGrpcService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherGrpcService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherGrpcService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\WeatherGrpcService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwDIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:50:45.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "XmlValidationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\XmlValidationService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\XmlValidationService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\XmlValidationService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\XmlValidationService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:38:00.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JakartaService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\JakartaService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\JakartaService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\JakartaService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\JakartaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:44:51.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "weather.proto",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Protos\\weather.proto",
+              "RelativeDocumentMoniker": "TagsApi\\Protos\\weather.proto",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Protos\\weather.proto",
+              "RelativeToolTip": "TagsApi\\Protos\\weather.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2026-06-09T16:54:05.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Services\\WeatherService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Services\\WeatherService.cs",
+              "RelativeToolTip": "TagsApi\\Services\\WeatherService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAuwEQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:49:56.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "WeatherController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\WeatherController.cs",
               "RelativeDocumentMoniker": "TagsApi\\Controllers\\WeatherController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\WeatherController.cs",
               "RelativeToolTip": "TagsApi\\Controllers\\WeatherController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwCIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:42:15.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-09T16:49:37.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JakartaController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\JakartaController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\JakartaController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\JakartaController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\JakartaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:44:47.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TagSoapService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Soap\\TagSoapService.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Soap\\TagSoapService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Soap\\TagSoapService.cs",
+              "RelativeToolTip": "TagsApi\\Soap\\TagSoapService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwD0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:37:36.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SoapController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\SoapController.cs",
+              "RelativeDocumentMoniker": "TagsApi\\Controllers\\SoapController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TagsProject\\Backend\\TagsApi\\TagsApi\\Controllers\\SoapController.cs",
+              "RelativeToolTip": "TagsApi\\Controllers\\SoapController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T16:15:16.583Z"
             }
           ]
         }

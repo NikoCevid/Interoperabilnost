@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Weather
+          <span style="font-size:1rem;font-weight:500;color:var(--text-2)">&thinsp;gRPC</span>
+        </h1>
+        <p class="page-subtitle">Real-time weather data via gRPC microservice</p>
+      </div>
+    </div>
+
+    <div id="alert-container" class="mb-4"></div>
+
+    <div class="content-center">
+
+      <div class="card card-body">
+        <div class="flex gap-3 ai-c">
+          <div class="input-wrap w-full">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>
+              </svg>
+            </span>
+            <input id="city-input" type="text" class="input input-pad-icon"
+                   placeholder="Enter city name…" autocomplete="off">
+          </div>
+          <button id="get-weather-btn" class="btn btn-primary" style="flex-shrink:0;min-width:120px">
+            Get Weather
+          </button>
+        </div>
+
+        <div class="mt-4">
+          <p class="section-label mb-2">Quick cities</p>
+          <div id="quick-btns" class="quick-btns"></div>
+        </div>
+      </div>
+
+      <div id="weather-results"></div>
+
+
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>

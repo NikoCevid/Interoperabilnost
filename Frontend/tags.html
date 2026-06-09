@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+  <div class="page-container">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Tags</h1>
+        <p class="page-subtitle">Manage your space tags</p>
+      </div>
+      <a href="tag-form.html" class="btn btn-primary hidden" id="new-tag-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        New Tag
+      </a>
+    </div>
+
+    <div id="alert-container" class="mb-4"></div>
+
+    <div class="card">
+      <div class="toolbar">
+        <div class="input-wrap toolbar-search">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <input type="search" id="search-input" class="input input-pad-icon"
+                 placeholder="Search tags…">
+        </div>
+      </div>
+
+      <div style="overflow-x:auto">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Description</th>
+              <th>Created</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tags-body">
+            <tr class="loading-row"><td colspan="4"><span class="spinner spinner-blue"></span> Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card-footer pagination">
+        <span id="page-info" class="text-sm text-2">Loading…</span>
+        <div class="pagination-btns">
+          <button id="prev-btn" class="btn btn-secondary btn-sm" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Previous
+          </button>
+          <button id="next-btn" class="btn btn-secondary btn-sm" disabled>
+            Next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/tags.js"></script>
+</body>
+</html>

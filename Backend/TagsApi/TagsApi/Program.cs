@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -18,25 +18,21 @@ using TagsApi.Soap;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ─── Baza ─────────────────────────────────────────────────────────────────
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ─── Repositories ─────────────────────────────────────────────────────────────
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-// ─── Application Services ─────────────────────────────────────────────────────
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IXmlValidationService, XmlValidationService>();
 builder.Services.AddScoped<ITagSoapService, TagSoapService>();
+builder.Services.AddScoped<JakartaService>();
 
-// ─── HTTP Clients ─────────────────────────────────────────────────────────────
 builder.Services.AddHttpClient<IExternalTagService, ExternalTagService>();
 builder.Services.AddHttpClient<IWeatherService, WeatherService>();
 
-// ─── ImportValidationService factory ─────────────────────────────────────────
 builder.Services.AddScoped<ImportValidationService>(sp =>
 {
     var env = sp.GetRequiredService<IWebHostEnvironment>();
@@ -46,7 +42,6 @@ builder.Services.AddScoped<ImportValidationService>(sp =>
     return new ImportValidationService(xmlVal, xsdPath, jsonPath);
 });
 
-// ─── JWT konfiguracija ───────────────────────────────────────────────────────
 var jwtSecret = builder.Configuration["Jwt:Secret"]
     ?? throw new InvalidOperationException("Jwt:Secret missing from appsettings.json");
 
@@ -69,8 +64,8 @@ builder.Services
     });
 
 builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
 
-// ─── CORS ─────────────────────────────────────────────────────────────────────
 builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
         policy.WithOrigins(
@@ -82,16 +77,13 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod()
             .AllowCredentials()));
 
-// ─── CoreWCF SOAP ─────────────────────────────────────────────────────────────
 builder.Services.AddServiceModelServices();
 builder.Services.AddServiceModelMetadata();
 builder.Services.AddSingleton<IServiceBehavior,
     UseRequestHeadersForMetadataAddressBehavior>();
 
-// ─── gRPC ─────────────────────────────────────────────────────────────────────
 builder.Services.AddGrpc();
 
-// ─── GraphQL ──────────────────────────────────────────────────────────────────
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
@@ -99,7 +91,6 @@ builder.Services
     .AddType<TagGraphType>()
     .AddAuthorization();
 
-// ─── Controllers + Swagger ────────────────────────────────────────────────────
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -135,7 +126,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// ─── Auto-migracije ─────────────────────────────────────────────────────────────
 using (var scope = app.Services.CreateScope())
 {
     try
@@ -152,7 +142,6 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// ─── Middleware ───────────────────────────────────────────────────────────────
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -161,10 +150,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowFrontend");
+app.UseCookiePolicy(new CookiePolicyOptions
+{
+    MinimumSameSitePolicy = SameSiteMode.Lax,
+    Secure = CookieSecurePolicy.None
+});
 app.UseAuthentication();
 app.UseAuthorization();
 
-// ─── SOAP ─────────────────────────────────────────────────────────────────────
 app.UseServiceModel(sb =>
 {
     sb.AddService<TagSoapService>(opts =>
@@ -174,14 +167,11 @@ app.UseServiceModel(sb =>
 });
 app.Services.GetRequiredService<ServiceMetadataBehavior>().HttpGetEnabled = true;
 
-// ─── gRPC ─────────────────────────────────────────────────────────────────────
 app.MapGrpcService<WeatherGrpcService>();
 app.MapGet("/grpc", () => "gRPC active. Use WeatherGrpc.GetTemperature.");
 
-// ─── GraphQL ──────────────────────────────────────────────────────────────────
 app.MapGraphQL("/graphql");
 
-// ─── REST ─────────────────────────────────────────────────────────────────────
 app.MapControllers();
 
 app.Run();

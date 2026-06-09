@@ -11,6 +11,5 @@ public class Tag
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public bool IsDeleted { get; set; } = false;
 
-    // Navigation
     public User? Creator { get; set; }
 }

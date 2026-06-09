@@ -97,6 +97,65 @@ public class XmlValidationService : IXmlValidationService
         return results;
     }
 
+    public List<JakartaTagValidationResult> ValidateTagsPerRecord(string xmlContent, string xsdPath)
+    {
+        var results = new List<JakartaTagValidationResult>();
+
+        try
+        {
+            var doc = XDocument.Parse(xmlContent);
+            var tagNodes = doc.Root?.Elements("Tag") ?? Enumerable.Empty<XElement>();
+
+            foreach (var tagNode in tagNodes)
+            {
+                var tagName = tagNode.Element("Name")?.Value ?? string.Empty;
+                var errors = new List<string>();
+
+                var wrappedXml = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?><Tags>{tagNode}</Tags>";
+
+                try
+                {
+                    var schemas = new XmlSchemaSet();
+                    schemas.Add(null, xsdPath);
+
+                    var settings = new XmlReaderSettings
+                    {
+                        ValidationType = ValidationType.Schema,
+                        Schemas = schemas
+                    };
+                    settings.ValidationEventHandler += (_, e) =>
+                        errors.Add($"[{e.Severity}] Line {e.Exception?.LineNumber}, " +
+                                   $"Col {e.Exception?.LinePosition}: {e.Message}");
+
+                    using var reader = XmlReader.Create(new StringReader(wrappedXml), settings);
+                    while (reader.Read()) { }
+                }
+                catch (XmlException ex)
+                {
+                    errors.Add($"[Parse Error] Line {ex.LineNumber}: {ex.Message}");
+                }
+
+                results.Add(new JakartaTagValidationResult
+                {
+                    TagName = tagName,
+                    IsValid = errors.Count == 0,
+                    Errors = errors
+                });
+            }
+        }
+        catch (Exception ex)
+        {
+            results.Add(new JakartaTagValidationResult
+            {
+                TagName = string.Empty,
+                IsValid = false,
+                Errors = [$"[Parse Error] {ex.Message}"]
+            });
+        }
+
+        return results;
+    }
+
     private static string XmlEscape(string s) =>
         s.Replace("&", "&amp;")
          .Replace("<", "&lt;")

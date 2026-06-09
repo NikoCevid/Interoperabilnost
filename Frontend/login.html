@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <div class="auth-brand-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+          <line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+      </div>
+      <h1 class="auth-title">Tags Manager</h1>
+      <p class="auth-subtitle">Sign in to your account</p>
+    </div>
+
+    <div id="login-error" class="field-error mb-4"></div>
+
+    <form id="login-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="username">Username</label>
+        <input id="username" type="text" class="input" placeholder="Enter username"
+               autocomplete="username" autocapitalize="none" spellcheck="false">
+      </div>
+      <div class="form-group mt-4">
+        <label class="form-label" for="password">Password</label>
+        <input id="password" type="password" class="input" placeholder="Enter password"
+               autocomplete="current-password">
+      </div>
+      <div class="mt-5">
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Sign in</button>
+      </div>
+    </form>
+
+    <p class="auth-footer">
+      Don't have an account? <a href="register.html">Register</a>
+    </p>
+
+    <div class="demo-box">
+      <div class="demo-box-title">Demo credentials</div>
+      <p class="demo-cred"><code>admin</code> / <code>Password123!</code> &mdash; FullAccess</p>
+      <p class="demo-cred"><code>reader</code> / <code>Password123!</code> &mdash; ReadOnly</p>
+    </div>
+
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

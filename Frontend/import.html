@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+  <div class="page-container">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Import Tags</h1>
+        <p class="page-subtitle">Import tags from XML or JSON with automatic validation</p>
+      </div>
+    </div>
+
+    <div id="alert-container" class="mb-4"></div>
+
+    <div class="import-grid">
+
+      <div>
+
+        <div class="card card-body-sm mb-4">
+          <div class="section-label mb-3">Format</div>
+          <div class="format-tabs">
+            <button id="xml-tab" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+              XML
+            </button>
+            <button id="json-tab" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              JSON
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title" id="content-label">XML Content</span>
+            <button id="sample-btn"
+              style="background:none;border:none;color:var(--primary);font-size:0.875rem;font-weight:500;cursor:pointer;padding:0">
+              Load example
+            </button>
+          </div>
+          <div class="card-body">
+            <textarea id="content-area" class="textarea" rows="11"
+                      placeholder="Paste XML content here…"
+                      style="font-family:'Cascadia Code','Fira Mono','Courier New',monospace;font-size:0.8125rem;resize:vertical"></textarea>
+            <div class="flex ai-c gap-3 mt-3">
+              <label class="upload-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                Upload file
+                <input type="file" id="file-input" accept=".xml,.json,.txt">
+              </label>
+              <span class="text-sm text-3">or paste content above</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="import-btn" class="btn btn-primary btn-full btn-lg mt-4"
+                style="border-radius:var(--r-lg)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <span id="import-btn-label">Import XML</span>
+        </button>
+
+        <div id="results-box" class="card mt-4 hidden">
+          <div class="card-body" id="results-content"></div>
+        </div>
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem">
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/import.js"></script>
+</body>
+</html>

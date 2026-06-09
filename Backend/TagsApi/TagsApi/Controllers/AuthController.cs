@@ -13,13 +13,22 @@ public class AuthController : ControllerBase
 
     public AuthController(IAuthService authService) => _authService = authService;
 
+    private static CookieOptions RefreshCookieOptions => new()
+    {
+        HttpOnly = true,
+        Secure = false,
+        SameSite = SameSiteMode.Strict,
+        MaxAge = TimeSpan.FromDays(7)
+    };
+
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto dto, CancellationToken ct)
     {
         try
         {
             var result = await _authService.LoginAsync(dto, ct);
-            return Ok(result);
+            Response.Cookies.Append("refreshToken", result.RefreshToken, RefreshCookieOptions);
+            return Ok(new { result.AccessToken, result.AccessTokenExpiry, result.User });
         }
         catch (UnauthorizedAccessException ex)
         {
@@ -44,17 +53,45 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("refresh")]
-    public async Task<IActionResult> Refresh([FromBody] RefreshTokenDto dto, CancellationToken ct)
+    [AllowAnonymous]
+    public async Task<IActionResult> Refresh()
     {
+        var refreshToken = Request.Cookies["refreshToken"];
+
+        if (string.IsNullOrEmpty(refreshToken))
+            return Unauthorized(new { message = "No refresh token provided." });
+
         try
         {
-            var result = await _authService.RefreshTokenAsync(dto.RefreshToken, ct);
-            return Ok(result);
+            var result = await _authService.RefreshTokenAsync(refreshToken, HttpContext.RequestAborted);
+
+            Response.Cookies.Append("refreshToken", result.RefreshToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false,
+                SameSite = SameSiteMode.Strict,
+                MaxAge = TimeSpan.FromDays(7)
+            });
+
+            return Ok(new { accessToken = result.AccessToken, accessTokenExpiry = result.AccessTokenExpiry });
         }
-        catch (UnauthorizedAccessException ex)
+        catch (UnauthorizedAccessException)
         {
-            return Unauthorized(new { message = ex.Message });
+            return Unauthorized(new { message = "Invalid or expired refresh token." });
         }
+    }
+
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout(CancellationToken ct)
+    {
+        var refreshToken = Request.Cookies["refreshToken"];
+        if (!string.IsNullOrEmpty(refreshToken))
+        {
+            try { await _authService.RevokeTokenAsync(refreshToken, ct); } catch { }
+        }
+        Response.Cookies.Delete("refreshToken");
+        Response.Cookies.Delete("refresh_token");
+        return NoContent();
     }
 
     [HttpPost("revoke")]

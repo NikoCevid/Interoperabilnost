@@ -30,7 +30,7 @@ public class WeatherController : ControllerBase
             var results = await _weatherService.GetTemperatureByCity(cityName, ct);
 
             if (!results.Any())
-                return NotFound(new { message = $"No weather data found for: {cityName}" });
+                return NotFound(new { message = $"No data found for: {cityName}" });
 
             return Ok(new
             {

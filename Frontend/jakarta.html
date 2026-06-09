@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakarta XML — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+  <div class="content-wide">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Jakarta XML Validation</h1>
+        <p class="page-subtitle">Validates each tag from the database individually against the XSD schema (simulates Jakarta XML Binding per-record validation)</p>
+      </div>
+    </div>
+
+    <div id="alert-container" class="mb-4"></div>
+
+
+    <div style="margin-bottom:1.25rem">
+      <button id="jakarta-validate-btn" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        Validate tags
+      </button>
+    </div>
+
+    <div id="jakarta-results" class="hidden"></div>
+
+  </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/jakarta.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Form — Tags Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+  <div class="content-center">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title" id="form-title">New Tag</h1>
+        <p class="page-subtitle" id="form-subtitle">Create a new tag</p>
+      </div>
+      <a href="tags.html" class="btn btn-secondary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Cancel
+      </a>
+    </div>
+
+    <div id="alert-container" class="mb-4"></div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title" id="card-title">Tag details</span>
+      </div>
+      <div class="card-body">
+        <form id="tag-form" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="name-input">
+              Name <span class="required">*</span>
+            </label>
+            <input id="name-input" type="text" class="input"
+                   placeholder="e.g. Bug, Feature, Urgent" maxlength="100">
+          </div>
+
+          <div class="form-group mt-5">
+            <label class="form-label">Color <span class="required">*</span></label>
+            <div class="color-picker-row">
+              <input id="color-hex" type="text" class="input"
+                     value="#6366F1" placeholder="#RRGGBB" maxlength="7"
+                     style="font-family:monospace;max-width:130px">
+              <div class="color-swatch-btn" title="Click to open color picker">
+                <input type="color" id="color-picker" value="#6366F1">
+              </div>
+            </div>
+            <div id="color-presets" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem"></div>
+            <script>
+              document.getElementById('color-presets').innerHTML =
+                ['#6366F1','#2563EB','#0891B2','#059669','#65A30D',
+                 '#D97706','#DC2626','#DB2777','#7C3AED','#475569']
+                .map(c =>
+                  `<button type="button" onclick="setColor('${c}')" title="${c}"
+                    style="width:24px;height:24px;border-radius:5px;background:${c};
+                           border:2px solid transparent;cursor:pointer;transition:transform .1s"
+                    onmouseover="this.style.transform='scale(1.2)'"
+                    onmouseout="this.style.transform=''"></button>`
+                ).join('');
+            </script>
+          </div>
+
+          <div class="form-group mt-5">
+            <label class="form-label" for="desc-input">Description</label>
+            <textarea id="desc-input" class="textarea" rows="3"
+                      placeholder="Optional description…" maxlength="500"></textarea>
+          </div>
+
+          <div class="flex gap-3 mt-6">
+            <button type="submit" id="submit-btn" class="btn btn-primary" style="min-width:130px">
+              Save Tag
+            </button>
+            <a href="tags.html" class="btn btn-secondary">Cancel</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/tag-form.js"></script>
+  <script>
+    function setColor(hex) {
+      document.getElementById('color-hex').value   = hex.toUpperCase();
+      document.getElementById('color-picker').value = hex;
+    }
+  </script>
+</body>
+</html>

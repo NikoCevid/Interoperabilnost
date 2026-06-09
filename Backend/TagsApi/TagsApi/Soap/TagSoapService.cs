@@ -1,8 +1,7 @@
 ﻿using CoreWCF;
 using Microsoft.AspNetCore.Hosting;
 using TagsApi.Application.Interfaces;
-
-
+using TagsApi.Application.DTOs;
 
 namespace TagsApi.Soap;
 
@@ -16,18 +15,24 @@ public interface ITagSoapService
 public sealed class TagSoapService : ITagSoapService
 {
     private readonly ITagService _tagService;
+    private readonly IExternalTagService _externalTagService;
     private readonly IXmlValidationService _xmlValidation;
+    private readonly IConfiguration _config;
     private readonly ILogger<TagSoapService> _logger;
     private readonly string _xsdPath;
 
     public TagSoapService(
         ITagService tagService,
+        IExternalTagService externalTagService,
         IXmlValidationService xmlValidation,
+        IConfiguration config,
         ILogger<TagSoapService> logger,
         IWebHostEnvironment env)
     {
         _tagService = tagService;
+        _externalTagService = externalTagService;
         _xmlValidation = xmlValidation;
+        _config = config;
         _logger = logger;
         _xsdPath = SysPath.Combine(env.ContentRootPath, "Schemas", "tags.xsd");
     }
@@ -36,7 +41,19 @@ public sealed class TagSoapService : ITagSoapService
     {
         try
         {
-            var tags = await _tagService.SearchAsync(searchTerm);
+            List<TagDto> tags;
+            if (_config.GetValue<bool>("UseExternalApi"))
+            {
+                var spaceId = _config["ClickUp:SpaceId"] ?? "";
+                var all = await _externalTagService.GetTagsFromExternalApiAsync(spaceId);
+                tags = string.IsNullOrWhiteSpace(searchTerm)
+                    ? all
+                    : all.Where(t => t.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            else
+            {
+                tags = await _tagService.SearchAsync(searchTerm);
+            }
 
             var xml = _xmlValidation.GenerateTagsXml(tags);
 
